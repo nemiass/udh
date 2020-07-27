@@ -1,24 +1,25 @@
 <?php
 namespace Clases;
 
-class Usuario
+abstract class Usuario
 {
     protected $nombres;
     protected $apellidos;
     protected $telefono;
-    protected $correo;
-    protected $id_pa;
-
-    public function __construct($nombres, $apellidos, $telefono, $correo, $id_pa)
+    protected $dni;
+    protected $user;
+    protected $pass;
+  
+    public function __construct($nombres, $apellidos, $telefono, $dni, $user, $pass)
     {
         $this->nombres = $nombres;
         $this->apellidos = $apellidos;
         $this->telefono = $telefono;
-        $this->correo = $correo;
-        $this->id_pa = $id_pa;
+        $this->dni = $dni;
+        $this->user = $user;
+        $this->pass = $pass;
     }
 
-    // getter y setters
     public function getNombres(): string
     {
         return $this->nombres;
@@ -49,25 +50,23 @@ class Usuario
         $this->telefono = $telefono;
     }
 
-    public function getCorreo(): string
+    public function getUsert(): string
     {
-        return $this->correo;
+        return $this->user;
     }
 
-    public function setCorreo($correo): void
+    public function setUser($user): void
     {
-        $this->correo = $correo;
+        $this->user = $user;
     }
 
-    public function getIdPa(): int
+    public function getPass(): string
     {
-        return $this->id_pa;
+        return $this->pass;
     }
 
-    public function setIdPa($id_pa): void
+    public function setPass($pass): void
     {
-        $this->id_pa = $id_pa;
+        $this->pass = $pass;
     }
-
-
 }

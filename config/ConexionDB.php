@@ -3,7 +3,7 @@ namespace Clases;
 
 class ConexionDB 
 {
-    private $dsn = "mysql:host=localhost;dbname=udh";
+    private $dsn = "mysql:host=localhost;dbname=farmacia";
     private $user = "root";
     private $password = "";
     private $option = array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'");
